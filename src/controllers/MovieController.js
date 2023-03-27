@@ -55,12 +55,6 @@ module.exports = {
 
         const { id } = req.params
 
-        const findMovieByTitle = await prisma.movie.findUnique({
-            where: {
-                title: String(title)
-            }
-        })
-
         const findMovieById = await prisma.movie.findUnique({
             where: {
                 id: Number(id)
@@ -70,11 +64,7 @@ module.exports = {
         if (!findMovieById) {
             return res.json('Filme não encontrado!')
         }
-
-        if (findMovieByTitle) {
-            return res.json('Filme já existe, adicione outro!')
-        }
-
+        
         else {
             await prisma.movie.update({
                 where: {
