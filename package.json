@@ -1,0 +1,19 @@
+{
+  "name": "api-movie",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^4.11.0",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "prisma": "^4.11.0"
+  }
+}
